@@ -1,17 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-import { Header } from './components/header/Header';
-import { Footer } from './components/footer/Footer';
-import Button from './components/button/Button';
-import Card from './components/card/Card'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from "./pages/home/Home"
+import About from './pages/about/About';
+import Contact from './pages/contact/Contact';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
       <Footer />
-      <Button text="Folder" colour="btn btn-primary" />
-      <Card title="App Card" subtitle="App Subtitle" des="Muhammd Zubair S/o Ghulam Rasool Mughal living in Sangla Hill." />
-    </>
+    </BrowserRouter>
   )
 }
 

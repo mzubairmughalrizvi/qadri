@@ -1,6 +1,5 @@
 import Button from "../button/Button";
-
-export function Footer() {
+function Footer() {
     return (
         <>
             <h1>Footer</h1>
@@ -8,3 +7,4 @@ export function Footer() {
         </>
     )
 }
+export default Footer;
